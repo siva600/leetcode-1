@@ -32,8 +32,7 @@ def licenseKeyFormatting(self, S, K):
     to_return = deque()
     chunk_size = 0
     for i in range(len(S)-1, -1, -1):
-        c = S[i]
-        if c == '-':
+        if (c := S[i]) == '-':
             continue
         else:
             if chunk_size < K:

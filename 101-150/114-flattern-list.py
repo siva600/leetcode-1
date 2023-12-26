@@ -26,8 +26,7 @@ def flatten(root):
       stack.appendleft(root.right)
       stack.appendleft(root.left)
       while stack:
-          node = stack.popleft()
-          if node is None:
+          if (node := stack.popleft()) is None:
               continue
           stack.appendleft(node.right)
           stack.appendleft(node.left)

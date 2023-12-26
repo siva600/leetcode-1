@@ -22,8 +22,7 @@ def sortedArrayToBST(nums):
         """
         if not nums:
             return None
-        n = len(nums)
-        if n == 1:
+        if (n := len(nums)) == 1:
             return TreeNode(nums[0])
         root = TreeNode(nums[n/2])
         root.left = sortedArrayToBST(nums[:n/2])
