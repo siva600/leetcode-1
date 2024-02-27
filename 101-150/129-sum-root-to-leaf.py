@@ -43,7 +43,7 @@ def sumNumbers(root):
             stack.append(node.right)
     to_return, carry, i = 0, 0, 0
     while leaves:
-        to_add = sum([node.val for node in leaves]) + carry
+        to_add = sum(node.val for node in leaves) + carry
         carry, digit = divmod(to_add, 10)
         to_return += digit*(10**i)
         leaves = [parent[node] for node in leaves if node in parent]
