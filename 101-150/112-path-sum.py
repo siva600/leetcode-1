@@ -21,7 +21,7 @@ def hasPathSum(root, sum):
       :type sum: int
       :rtype: bool
       """
-      if root is None and sum is 0:
+      if root is None and sum == 0:
           return False
       if not root:
           return False
